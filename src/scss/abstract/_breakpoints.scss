@@ -1,0 +1,11 @@
+$breakpoints: (
+  small: 300,
+  medium: 768,
+  large: 1024,
+);
+
+@mixin breakpoint($breakpoint) {
+  @media screen and (min-width: rem-calc(map-get($map: $breakpoints, $key: $breakpoint))) {
+    @content;
+  }
+}

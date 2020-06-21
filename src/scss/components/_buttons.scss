@@ -1,0 +1,24 @@
+%button {
+  border: none;
+  border-radius: rem-calc(4);
+  cursor: pointer;
+  outline: none;
+  padding: rem-calc(12) rem-calc(36);
+  transition: 0.3s ease-out;
+
+  &:disabled {
+    pointer-events: none;
+    color: color(gray-dark);
+    background-color: #8fa3bf;
+  }
+}
+
+.primary-button {
+  @extend %button;
+  background-color: color(primary);
+  color: white;
+
+  &:hover {
+    background-color: color(primary-dark);
+  }
+}

@@ -1,0 +1,35 @@
+// TODO: Setup typography
+// @font-face {
+//   font-family: "Barlow",
+//   src: url("") format(""), url("") format("");
+// }
+@import url("https://fonts.googleapis.com/css?family=Barlow:300,400,500,700&display=swap");
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+@each $heading, $heading-values in $headings-font-size {
+  .#{$heading} {
+    font-size: rem-calc(map-get($map: $heading-values, $key: small));
+
+    @include breakpoint(large) {
+      font-size: rem-calc(map-get($map: $heading-values, $key: large));
+    }
+  }
+}
+
+.large {
+  font-size: rem-calc($large-font-size);
+}
+
+.small {
+  font-size: rem-calc($small-font-size);
+}
+
+// FONT WEIGHTS
+@each $weight in (100, 200, 300, 400, 500, 600, 700) {
+  .w#{$weight} {
+    font-weight: $weight;
+  }
+}

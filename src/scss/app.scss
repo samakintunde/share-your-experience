@@ -1,0 +1,41 @@
+/* ABSTRACT */
+@import "./abstract/colors";
+@import "./abstract/typography";
+@import "./abstract/utils";
+@import "./abstract/breakpoints";
+@import "./abstract/grid";
+
+/* BASE */
+@import "./base/resets";
+@import "./base/typography";
+@import "./base/spacings";
+@import "./base/transitions";
+
+/* COMPONENTS */
+@import "./components/buttons";
+@import "./components/drop-area";
+@import "./components/preview-item";
+@import "./components/modal";
+@import "./components/forms";
+
+/* LAYOUT */
+@import "./layout/header";
+@import "./layout/grid";
+@import "./layout/flex";
+@import "./layout/footer";
+
+body {
+  background-color: color(gray-light);
+}
+
+.color-success {
+  color: color(success);
+}
+
+.preview {
+  > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
