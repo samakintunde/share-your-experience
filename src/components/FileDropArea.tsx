@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import classNames from "clsx";
 import clsx from "clsx";
 
 const FileDropArea = (props: any) => {
@@ -13,20 +12,6 @@ const FileDropArea = (props: any) => {
     "padding-md": true,
     highlight: isDragOver,
   });
-
-  const dragHandler = (
-    event: React.DragEvent<HTMLDivElement>,
-    cb: Function
-  ) => {
-    // Stops the browser from opening the file in the tab
-    event.preventDefault();
-    // Stops the event from bubbling higher than necessary
-    event.stopPropagation();
-
-    // @ts-ignore
-    const dropAreaElem = event.target.closest(".js-drop-area");
-    cb(event);
-  };
 
   const handleDragEnter = () => {
     setIsDragOver(true);
